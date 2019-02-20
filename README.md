@@ -1,3 +1,35 @@
+## This package is obsolete
+
+Since version 22.1 Emacs has built-in support for themes.  That
+implementation does not derive from the implementation provided
+by this package.  Back when this was news we referred to the new
+implementation as `deftheme` themes, as opposed to `color-theme`
+themes.
+
+This package comes with a large collection of themes.  If you
+still use it because you want to use one of those, then you can
+never-the-less migrate to the "new" theme implementation.  The
+[`color-theme-modern`][port] package ports all themes that are
+bundles with `color-theme` to the `deftheme` format.  It also
+ports a few third-party themes. Its documentation contains setup
+instructions.  Don't forget to uninstall `color-theme`.
+
+For some reason this package is in the top 93rd percentile of
+downloads from Melpa.  It is unlikely that so may people still
+use this package while being fully aware that Emacs ships with
+another implementation, but we cannot be sure.
+
+It is more likely that most of users installed this package
+because they they were under the false impression that this was
+still necessary to get Emacs to support themes.  That help this
+group of users, loading this package now shows a warning, making
+them aware of the situation.
+
+[port]: https://github.com/emacs-jp/replace-colorthemes#color-theme-modern--
+
+## Old documentation
+
+```
 Sharing your current color setup:
 
 Use `color-theme-submit'.  If you have already invested time in
@@ -84,3 +116,4 @@ Once you have printed the color-theme, you can make sure it looks
 similar in both Emacs and XEmacs by running
 `color-theme-analyze-defun' on the printed theme.  This function
 will check for missing faces for the other editor...
+```
